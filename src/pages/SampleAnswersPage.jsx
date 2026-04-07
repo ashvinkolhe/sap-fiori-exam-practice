@@ -60,7 +60,7 @@ function SampleCard({ sample, isOpen, onToggle }) {
           <p style={{ color:'#e2e8f0', fontSize:13, fontWeight:500, lineHeight:1.5, margin:0 }}>
             {sample.question}
           </p>
-          <div style={{ display:'flex', gap:12, marginTop:6 }}>
+          <div style={{ display:'flex', flexWrap:'wrap', gap:'4px 12px', marginTop:6 }}>
             {sample.keyPoints.slice(0,3).map(k => (
               <span key={k} style={{ fontSize:10, color:'#475569', display:'flex', alignItems:'center', gap:3 }}>
                 <span style={{ color:'#34d399', fontSize:10 }}>✓</span> {k}
@@ -156,7 +156,7 @@ export default function SampleAnswersPage() {
       </div>
 
       {/* Stats strip */}
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:10, marginBottom:20 }}>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-5">
         {[
           ['📝', SAMPLE_ANSWERS.length, 'Model answers'],
           ['🏷️', activeCats.length, 'Topic areas'],
@@ -175,8 +175,8 @@ export default function SampleAnswersPage() {
       </div>
 
       {/* Search + filter */}
-      <div style={{ marginBottom:16, display:'flex', gap:10, flexWrap:'wrap' }}>
-        <div style={{ flex:1, minWidth:220, position:'relative' }}>
+      <div style={{ marginBottom:16, display:'flex', gap:10, flexWrap:'wrap', alignItems:'center' }}>
+        <div style={{ flex:1, minWidth:160, position:'relative' }}>
           <Search size={15} style={{ position:'absolute', left:13, top:'50%', transform:'translateY(-50%)', color:'#64748b', pointerEvents:'none' }} />
           <input value={search} onChange={e => setSearch(e.target.value)}
             placeholder="Search questions, topics, annotations…"

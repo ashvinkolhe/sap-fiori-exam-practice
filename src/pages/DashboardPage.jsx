@@ -37,14 +37,14 @@ export default function DashboardPage() {
 
   return (
     <div className="px-4 py-8 max-w-4xl mx-auto">
-      <div className="mb-8 animate-fade-in flex items-start justify-between">
+      <div className="mb-8 animate-fade-in flex items-start justify-between gap-4 flex-wrap">
         <div>
           <div className="inline-flex items-center gap-2 badge-blue mb-3"><LayoutDashboard size={14} /> Progress Dashboard</div>
-          <h1 className="text-3xl font-black text-white mb-2">My Progress</h1>
-          <p className="text-slate-400">Track your preparation across all activities.</p>
+          <h1 className="text-2xl sm:text-3xl font-black text-white mb-2">My Progress</h1>
+          <p className="text-slate-400 text-sm sm:text-base">Track your preparation across all activities.</p>
         </div>
         <button onClick={() => { if (confirm('Reset all progress? This cannot be undone.')) resetProgress() }}
-          className="btn-secondary text-sm flex items-center gap-2 text-slate-500">
+          className="btn-secondary text-sm flex items-center gap-2 text-slate-500 flex-shrink-0">
           <RefreshCw size={14} /> Reset
         </button>
       </div>

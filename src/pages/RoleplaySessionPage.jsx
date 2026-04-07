@@ -259,7 +259,7 @@ export default function RoleplaySessionPage() {
 
       <div style={{ background:'rgba(255,255,255,0.03)', border:'1px solid rgba(255,255,255,0.08)', borderRadius:14, padding:14, marginBottom:14 }}>
         <div style={{ fontSize:11, fontWeight:700, color:'#94a3b8', textTransform:'uppercase', marginBottom:10 }}>🎯 Evaluated On</div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {scenario.scoringAreas.map((a, i) => (
             <div key={i} style={{ display:'flex', alignItems:'center', gap:8, fontSize:12, color:'#cbd5e1' }}>
               <span style={{
@@ -435,18 +435,18 @@ export default function RoleplaySessionPage() {
       <div style={{ padding:'10px 12px', borderTop:'1px solid rgba(255,255,255,0.08)', flexShrink:0, background:'rgba(15,22,41,0.8)' }}>
         {!isDone ? (
           <>
-            <div style={{ display:'flex', gap:8 }}>
+            <div style={{ display:'flex', gap:8, alignItems:'flex-end' }}>
               <textarea ref={textareaRef} value={input} onChange={e => setInput(e.target.value)} onKeyDown={handleKeyDown}
-                placeholder="Explain your approach… (Enter to send, Shift+Enter for new line)"
+                placeholder="Explain your approach…"
                 disabled={isTyping} rows={2}
                 style={{
                   flex:1, background:'rgba(255,255,255,0.05)', border:'1px solid rgba(255,255,255,0.1)',
                   borderRadius:12, padding:'9px 13px', color:'#fff', fontSize:13, resize:'none',
-                  fontFamily:'inherit', outline:'none', minHeight:52, maxHeight:140,
+                  fontFamily:'inherit', outline:'none', minHeight:52, maxHeight:120,
                 }} />
               <button onClick={submitAnswer} disabled={isTyping || !input.trim()}
                 style={{
-                  width:48, minHeight:52, borderRadius:12, border:'none', cursor:'pointer',
+                  width:44, height:44, borderRadius:12, border:'none', cursor:'pointer',
                   background: isTyping || !input.trim() ? 'rgba(255,255,255,0.08)' : '#2563eb',
                   color:'#fff', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0,
                 }}>
@@ -455,7 +455,7 @@ export default function RoleplaySessionPage() {
                   : <Send size={17} />}
               </button>
             </div>
-            <div style={{ display:'flex', justifyContent:'space-between', marginTop:6, fontSize:11, color:'#334155' }}>
+            <div style={{ display:'flex', justifyContent:'space-between', marginTop:6, fontSize:11, color:'#334155', flexWrap:'wrap', gap:4 }}>
               <button onClick={() => setShowHint(h => !h)}
                 style={{ display:'flex', alignItems:'center', gap:4, background:'none', border:'none', cursor:'pointer', color:'#64748b', fontSize:11 }}>
                 <Lightbulb size={12} /> {showHint ? 'Hide hint' : 'Show hint'}
