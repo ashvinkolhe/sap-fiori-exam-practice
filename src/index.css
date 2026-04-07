@@ -115,3 +115,14 @@
   background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* Mobile safe area support */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+}
+
+/* Prevent text overflow on small screens */
+@media (max-width: 640px) {
+  .section-heading { @apply text-xl; }
+  .section-sub { @apply text-xs; }
+}

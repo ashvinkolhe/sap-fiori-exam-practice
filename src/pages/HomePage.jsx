@@ -35,22 +35,22 @@ export default function HomePage() {
     <div className="px-4 py-8 max-w-6xl mx-auto">
       {/* Hero */}
       <div className="text-center mb-12 animate-fade-in">
-        <div className="inline-flex items-center gap-2 badge-blue mb-4 text-sm px-4 py-1.5">
-          <Zap size={14} /> NEW FORMAT · C_FIORD_2601 · Scenario Based Assessment
+        <div className="inline-flex items-center gap-2 badge-blue mb-4 text-xs sm:text-sm px-3 sm:px-4 py-1.5 text-center">
+          <Zap size={13} /> NEW FORMAT · C_FIORD_2601 · Scenario Based Assessment
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
           Crack the New
           <span className="gradient-text block">SAP Fiori Exam</span>
         </h1>
-        <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
+        <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8">
           The only prep platform built specifically for the new C_FIORD_2601 Scenario Based Assessment format. AI roleplay simulations, 115+ scenario questions, full mock exams.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
-          <Link to="/roleplay" className="btn-primary flex items-center gap-2 text-base px-6 py-3">
-            <Brain size={20} /> Start AI Roleplay
+          <Link to="/roleplay" className="btn-primary flex items-center gap-2 text-sm sm:text-base px-5 sm:px-6 py-2.5 sm:py-3">
+            <Brain size={18} /> Start AI Roleplay
           </Link>
-          <Link to="/practice" className="btn-secondary flex items-center gap-2 text-base px-6 py-3">
-            <ClipboardList size={20} /> Practice Tests
+          <Link to="/practice" className="btn-secondary flex items-center gap-2 text-sm sm:text-base px-5 sm:px-6 py-2.5 sm:py-3">
+            <ClipboardList size={18} /> Practice Tests
           </Link>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function HomePage() {
         <h2 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
           <Shield size={20} className="text-amber-400" /> Real Exam Format: C_FIORD_2601
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
           {EXAM_FACTS.map(({ icon: Icon, label, value }) => (
             <div key={label} className="flex items-start gap-2.5">
               <Icon size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />

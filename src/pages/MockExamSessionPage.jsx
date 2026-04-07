@@ -63,7 +63,7 @@ export default function MockExamSessionPage() {
         <h1 className="text-2xl font-black text-white mb-2">{exam.title}</h1>
         <p className="text-slate-400 text-sm">{exam.description}</p>
       </div>
-      <div className="grid grid-cols-3 gap-3 mb-6">
+      <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6">
         {[['Questions', exam.questions.length], ['Time', `${exam.totalTime} min`], ['Pass', `${exam.passMark}%`]].map(([k, v]) => (
           <div key={k} className="glass-card p-4 text-center"><div className="text-xl font-black text-white">{v}</div><div className="text-slate-500 text-xs">{k}</div></div>
         ))}

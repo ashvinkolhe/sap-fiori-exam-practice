@@ -86,7 +86,7 @@ export default function TestSessionPage() {
         <h1 className="text-2xl font-black text-white mb-2">{testSet.title}</h1>
         <p className="text-slate-400 text-sm">{testSet.description}</p>
       </div>
-      <div className="grid grid-cols-3 gap-3 mb-8">
+      <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-8">
         {[['Questions', testSet.questions.length], ['Time', `${testSet.estimatedTime} min`], ['Pass Mark', '70%']].map(([k, v]) => (
           <div key={k} className="glass-card p-4 text-center">
             <div className="text-xl font-black text-white mb-0.5">{v}</div>
@@ -164,7 +164,7 @@ export default function TestSessionPage() {
   return (
     <div className="px-4 py-4 max-w-2xl mx-auto" ref={topRef}>
       {/* Header */}
-      <div className="flex items-center gap-3 mb-4 sticky top-0 bg-surface-900/90 backdrop-blur-sm py-2 -mx-4 px-4 z-10">
+      <div className="flex items-center gap-3 mb-4 sticky top-0 bg-surface-900/95 backdrop-blur-sm py-2 -mx-4 px-4 z-10 border-b border-white/5">
         <Link to="/practice" className="text-slate-500 hover:text-white"><ChevronLeft size={18} /></Link>
         <div className="flex-1">
           <div className="h-2 bg-surface-700 rounded-full overflow-hidden">

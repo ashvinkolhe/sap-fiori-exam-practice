@@ -37,7 +37,7 @@ export default function MockExamPage() {
                   <p className="text-slate-400 text-sm">{exam.description}</p>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-3 mb-4">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4">
                 {[['Questions', exam.questions.length], ['Time Limit', `${exam.totalTime} min`], ['Pass Mark', `${exam.passMark}%`]].map(([k, v]) => (
                   <div key={k} className="bg-surface-700/50 rounded-lg p-2.5 text-center">
                     <div className="text-white font-bold text-sm">{v}</div>
